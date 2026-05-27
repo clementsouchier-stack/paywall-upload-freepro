@@ -829,7 +829,258 @@
       line-height: 1.35;
     }
 
-    @media (max-width: 900px) {
+
+    /* Simplified upgrade modal */
+    .storage-modal {
+      width: min(560px, 100%);
+      border-radius: 26px;
+      padding: 26px;
+      border: 1px solid rgba(37, 36, 40, 0.08);
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 24px 70px rgba(37,36,40,0.16);
+    }
+
+    .storage-modal::before {
+      background: radial-gradient(circle at top left, rgba(52,68,212,0.08), transparent 42%);
+    }
+
+    .modal-top {
+      grid-template-columns: 52px 1fr auto;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .modal-emblem {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: var(--blue);
+    }
+
+    .modal-title {
+      font-size: 24px;
+      letter-spacing: -0.035em;
+    }
+
+    .modal-copy {
+      max-width: 410px;
+      font-size: 14px;
+      color: var(--grey-600);
+    }
+
+    .simple-limit-card {
+      border: 1px solid var(--grey-200);
+      background: #fff;
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .simple-limit-header,
+    .simple-usage-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .simple-limit-header {
+      margin-bottom: 14px;
+      color: var(--grey-600);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .simple-limit-header strong {
+      color: var(--black);
+      font-size: 13px;
+    }
+
+    .simple-usage-bar {
+      height: 10px;
+      border-radius: 999px;
+      background: #ECECF6;
+      overflow: hidden;
+    }
+
+    .simple-usage-bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--blue);
+    }
+
+    .simple-usage-meta {
+      margin-top: 10px;
+      color: var(--grey-500);
+      font-size: 12px;
+    }
+
+    .simple-benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .simple-benefits > div {
+      border: 1px solid var(--grey-200);
+      background: rgba(245,245,247,0.62);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .simple-benefits strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .simple-benefits span {
+      display: block;
+      color: var(--grey-500);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .cta-row {
+      align-items: center;
+    }
+
+    .cta-actions {
+      margin-left: auto;
+    }
+
+    .primary-cta {
+      height: 46px;
+      border-radius: 12px;
+      padding: 0 20px;
+    }
+
+    .ghost-cta {
+      color: var(--grey-500);
+    }
+
+    
+
+    .pro-upgrade-modal {
+      width: min(680px, 100%);
+      padding: 26px;
+    }
+
+    .pro-upgrade-modal .modal-copy {
+      max-width: 500px;
+      font-size: 15px;
+    }
+
+    .pro-plan-card {
+      border: 1px solid rgba(52,68,212,0.12);
+      background: rgba(255,255,255,0.86);
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+    }
+
+    .plan-limit {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--grey-500);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .plan-limit strong {
+      display: block;
+      color: var(--black);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .paused-pill {
+      height: 30px;
+      padding: 0 11px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,201,74,0.18);
+      border: 1px solid rgba(255,201,74,0.32);
+      color: #9A6D00;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .pro-benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .pro-benefit {
+      min-height: 78px;
+      border: 1px solid var(--grey-200);
+      background: rgba(245,245,247,0.58);
+      border-radius: 16px;
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .pro-benefit-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(52,68,212,0.10);
+      color: var(--blue);
+    }
+
+    .pro-benefit-icon svg {
+      width: 13px;
+      height: 13px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .secondary-cta {
+      height: 46px;
+      border-radius: 12px;
+      padding: 0 18px;
+      background: rgba(255,255,255,0.82);
+      color: var(--black);
+      border: 1px solid rgba(52,68,212,0.16);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+@media (max-width: 900px) {
       html, body { min-height: 100%; overflow-x: hidden; }
       .app { min-height: 100vh; height: auto; display: block; overflow: visible; }
       .sidebar { display: none; }
@@ -850,6 +1101,7 @@
       .modal-emblem { width: 44px; height: 44px; }
       .modal-title { font-size: 22px; }
       .modal-copy { font-size: 13px; }
+      .simple-benefits { grid-template-columns: 1fr; }
       .capacity-card {
         align-items: flex-start;
       }
@@ -866,6 +1118,16 @@
       .primary-cta, .secondary-cta, .ghost-cta { width: 100%; height: 42px; }
       .fine-print { max-width: none; }
     }
+  
+
+    @media (max-width: 900px) {
+      .pro-upgrade-modal { width: 100%; padding: 20px; }
+      .pro-benefits-row { grid-template-columns: 1fr 1fr; }
+      .plan-limit { flex-direction: column; }
+      .paused-pill { align-self: flex-start; }
+      .secondary-cta { width: 100%; height: 42px; }
+    }
+
   </style>
 </head>
 <body>
@@ -925,7 +1187,7 @@
         </section>
 
         <div class="modal-layer">
-          <section class="storage-modal" role="dialog" aria-labelledby="storage-title" aria-describedby="storage-description">
+          <section class="storage-modal pro-upgrade-modal" role="dialog" aria-labelledby="storage-title" aria-describedby="storage-description">
             <div class="modal-content">
               <div class="modal-top">
                 <div class="modal-emblem">
@@ -934,84 +1196,63 @@
 
                 <div>
                   <div class="modal-title-row">
-                    <h2 class="modal-title" id="storage-title">Unlock more storage with Bridge Pro</h2>
+                    <h2 class="modal-title" id="storage-title">Go Pro to keep growing</h2>
                   </div>
                   <p class="modal-copy" id="storage-description">
-                    This upload needs 2.4 GB more than your current Free plan allows. Get more storage with Bridge Pro — but also unlock discovery hubs, advanced sharing, AI-powered workflows and premium insights.
+                    Get more storage, premium sharing, analytics and AI-powered tools for your releases.
                   </p>
                 </div>
 
                 <button class="modal-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
               </div>
 
-              <div class="usage-panel">
-                <div class="usage-head">
+              <div class="pro-plan-card">
+                <div class="plan-limit">
                   <div>
-                    <div class="usage-label">Storage limit reached</div>
-                    <div class="usage-value">25 tracks • 2 GB used</div>
+                    <span class="eyebrow">Free plan</span>
+                    <strong>25 tracks • 2 GB limit reached</strong>
                   </div>
-                  <div>
-                    <div class="usage-label">This upload</div>
-                    <div class="usage-value">+2.4 GB</div>
-                  </div>
+                  <span class="paused-pill">Upload paused</span>
                 </div>
 
-                <div class="usage-bar" aria-label="Storage usage">
-                  <div class="usage-used"></div>
-                  <div class="usage-extra"></div>
-                </div>
-
-                <div class="usage-foot">
-                  <span>Your upload is paused</span>
-                  <span>Upgrade to resume instantly</span>
+                <div class="simple-usage">
+                  <div class="simple-usage-bar" aria-label="Free plan usage">
+                    <span style="width: 100%;"></span>
+                  </div>
+                  <div class="simple-usage-meta">
+                    <span>Your files are safe</span>
+                    <span>Upgrade to resume instantly</span>
+                  </div>
                 </div>
               </div>
 
-              <div class="resume-list">
-                <div class="resume-row">
-                  <div class="resume-thumb"></div>
-                  <div>
-                    <div class="resume-title">03 - Oui.flac</div>
-                    <div class="resume-meta">20.4 MB • Upload paused</div>
-                  </div>
-                  <div class="resume-status">Resume with Pro</div>
+              <div class="pro-benefits-row" aria-label="Pro benefits">
+                <div class="pro-benefit">
+                  <span class="pro-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/></svg></span>
+                  <span>More storage</span>
                 </div>
-
-                <div class="resume-row">
-                  <div class="resume-thumb"></div>
-                  <div>
-                    <div class="resume-title">19 - Mon mari.flac</div>
-                    <div class="resume-meta">20.2 MB • Waiting</div>
-                  </div>
-                  <div class="resume-status">Queued</div>
+                <div class="pro-benefit">
+                  <span class="pro-benefit-icon"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></svg></span>
+                  <span>Premium sharing</span>
                 </div>
-              </div>
-
-              <div class="unlock-copy">
-                <div class="unlock-label">
-                  <svg viewBox="0 0 24 24"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/></svg>
-                  More than storage
+                <div class="pro-benefit">
+                  <span class="pro-benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+                  <span>Analytics</span>
                 </div>
-                <div class="unlock-title">Bridge Pro unlocks the full workflow</div>
-                <div class="unlock-sub">Go beyond storage limits with premium sharing, discovery hubs, AI-powered search and advanced collaboration tools built for professional music teams.</div>
-              </div>
-
-              <div class="benefits-row">
-                <div class="benefit-chip storage"><span class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/></svg></span>1 TB+ storage</div>
-                <div class="benefit-chip discovery"><span class="benefit-icon"><svg viewBox="0 0 24 24"><path d="m5 19 14-7-14-7v14Z"/></svg></span>Bridge Sync & Score</div>
-                <div class="benefit-chip sharing"><span class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></svg></span>Password sharing</div>
-                <div class="benefit-chip insights"><span class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 8-8"/><path d="M14 7h7v7"/></svg></span>Advanced insights</div>
-                <div class="benefit-chip ai"><span class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8"/><path d="M17 12H9"/><path d="m13 8-4 4 4 4"/><path d="M3 5v14"/></svg></span>AI search</div>
+                <div class="pro-benefit">
+                  <span class="pro-benefit-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8"/><path d="M17 12H9"/><path d="m13 8-4 4 4 4"/><path d="M3 5v14"/></svg></span>
+                  <span>AI tools</span>
+                </div>
               </div>
 
               <div class="cta-row">
-                <div class="fine-print">Your queued files are safe for now. Nothing has been uploaded until you confirm how to continue.</div>
+                <div class="fine-print">Switch plans anytime. Your queued files can continue right after upgrade.</div>
                 <div class="cta-actions">
                   <a class="primary-cta" href="https://clementsouchier-stack.github.io/pricing-checkout/" target="_blank" rel="noopener noreferrer">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clip-path="url(#clip-pro-diamond-white-storage)"><path d="M5.26953 1.36719L6.35156 3.74805L8.18555 4.58203H15.7246L15.8096 4.58691C16.005 4.61152 16.1821 4.72048 16.293 4.88672L19.0273 8.98828C19.197 9.24307 19.1768 9.58007 18.9775 9.8125L10.7744 19.3828C10.6425 19.5365 10.4486 19.6238 10.2461 19.6211C10.0434 19.6181 9.85124 19.5256 9.72363 19.3682L1.97656 9.79785C1.80124 9.58124 1.77502 9.27883 1.91016 9.03516L3.0498 6.98438L3.19824 6.71484L0.945312 5.69141L0 5.26172L0.945312 4.83203L3.32715 3.74902L4.41016 1.36719L4.83984 0.421875L5.26953 1.36719ZM8.93555 9.35742L7.48242 10.0176L8.93555 10.6787L9.59668 12.1318L10.2568 10.6787L11.7109 10.0176L10.2568 9.35742L9.59668 7.9043L8.93555 9.35742ZM4.11426 4.30176L4.04102 4.46289L3.87988 4.53613L2.28125 5.26172L3.87988 5.98828L4.04102 6.06152L4.11426 6.22266L4.83984 7.82031L5.56641 6.22266L5.63965 6.06152L5.80078 5.98828L7.39844 5.26172L5.80078 4.53613L5.63965 4.46289L5.56641 4.30176L4.83984 2.70312L4.11426 4.30176Z" fill="white"/></g><defs><clipPath id="clip-pro-diamond-white-storage"><rect width="19.142" height="19.1993" fill="white" transform="translate(0 0.421875)"/></clipPath></defs></svg>
-                    Unlock Pro
+                    Upgrade to Pro
                   </a>
-                  <a class="secondary-cta" href="https://clementsouchier-stack.github.io/pricing-checkout/" target="_blank" rel="noopener noreferrer">View plans</a>
+                  <a class="secondary-cta" href="https://clementsouchier-stack.github.io/pricing-checkout/" target="_blank" rel="noopener noreferrer">Explore plans</a>
                   <button class="ghost-cta">Remove files</button>
                 </div>
               </div>
