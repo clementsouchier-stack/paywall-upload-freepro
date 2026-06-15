@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bridge.audio — Storage Limit Paywall</title>
+  <title>Bridge.audio — Free Plan Limit Upgrade</title>
   <style>
     :root {
       --black: #252428;
@@ -1127,7 +1127,932 @@
       .secondary-cta { width: 100%; height: 42px; }
     }
 
-  </style>
+  
+/* Bridge Design System modal cleanup */
+:root {
+  --primaryBorder: #dedee5;
+  --secondaryBorder: #ececf1;
+  --primarySurface: #ffffff;
+  --neutralSofterBg: #f7f7f8;
+  --primaryDarkContent: #171719;
+  --secondaryContent: #74747e;
+  --tertiaryContent: #85858f;
+  --proBlue: #2F43DE;
+}
+
+.modal-layer {
+  background: rgba(245,245,247,.58) !important;
+  backdrop-filter: none !important;
+  place-items: center !important;
+}
+
+.storage-modal,
+.storage-modal.pro-upgrade-modal {
+  width: min(560px, 100%) !important;
+  border-radius: 18px !important;
+  border: 1px solid var(--primaryBorder) !important;
+  background: var(--primarySurface) !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 1px 2px rgba(20,20,25,.05), 0 12px 32px rgba(20,20,25,.10) !important;
+  padding: 28px !important;
+  overflow: visible !important;
+}
+
+.storage-modal::before,
+.storage-modal.pro-upgrade-modal::before {
+  display: none !important;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute !important;
+  top: -8px !important;
+  right: -8px !important;
+  background: #fff !important;
+  border: 1px solid var(--secondaryBorder) !important;
+  box-shadow: 0 1px 2px rgba(20,20,25,.05) !important;
+}
+
+.modal-header-clean {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 4px 22px 0;
+}
+
+.modal-title {
+  margin: 0 !important;
+  color: var(--primaryDarkContent) !important;
+  font-size: 26px !important;
+  line-height: 1.12 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.paused-pill {
+  height: 24px !important;
+  padding: 0 10px !important;
+  border-radius: 999px !important;
+  background: #FFF7E3 !important;
+  border: 1px solid #FFD978 !important;
+  color: #A16A00 !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+}
+
+.clean-plan-card,
+.pro-plan-card.clean-plan-card {
+  border: 1px solid var(--primaryBorder) !important;
+  background: #fff !important;
+  border-radius: 14px !important;
+  padding: 16px !important;
+  margin-bottom: 14px !important;
+  box-shadow: none !important;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease !important;
+}
+
+.clean-plan-limit,
+.plan-limit.clean-plan-limit {
+  display: block !important;
+  margin-bottom: 14px !important;
+  text-align: center !important;
+}
+
+.clean-plan-limit strong {
+  display: block !important;
+  color: var(--primaryDarkContent) !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  margin-bottom: 4px !important;
+}
+
+.clean-plan-limit span {
+  display: block !important;
+  color: var(--secondaryContent) !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+}
+
+.simple-usage-bar {
+  height: 8px !important;
+  background: var(--secondaryBorder) !important;
+}
+
+.simple-usage-bar span {
+  background: var(--proBlue) !important;
+}
+
+.simple-usage-meta {
+  color: var(--tertiaryContent) !important;
+}
+
+.clean-benefits-row,
+.pro-benefits-row.clean-benefits-row {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  margin-bottom: 22px !important;
+}
+
+.pro-benefit {
+  min-height: 96px !important;
+  border: 1px solid #E6EAFF !important;
+  background: #F7F8FF !important;
+  border-radius: 14px !important;
+  padding: 14px 10px !important;
+  color: var(--primaryDarkContent) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+.pro-benefit-icon {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+  background: #EEF2FF !important;
+  color: var(--proBlue) !important;
+  border: 1px solid #E0E6FF !important;
+}
+
+.pro-benefit-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+
+.pro-benefit:hover {
+  background: #F2F5FF !important;
+  border-color: #D9E0FF !important;
+}
+
+.clean-cta-row,
+.cta-row.clean-cta-row {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.clean-cta-row .cta-actions {
+  margin-left: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+.primary-cta {
+  background: #2F43DE !important;
+  border: 1px solid #2F43DE !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  height: 42px !important;
+  border-radius: 7px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.primary-cta:hover {
+  background: #2638BF !important;
+  border-color: #2638BF !important;
+}
+
+.primary-cta svg {
+  width: 16px !important;
+  height: 15px !important;
+}
+
+.secondary-cta {
+  height: auto !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--secondaryContent) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 2px 0 0 !important;
+  text-decoration: none !important;
+}
+
+.secondary-cta:hover {
+  color: var(--primaryDarkContent) !important;
+  text-decoration: underline !important;
+}
+
+@media (max-width: 900px) {
+  .modal-layer {
+    position: fixed !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px !important;
+    overflow: auto !important;
+  }
+
+  .storage-modal,
+  .storage-modal.pro-upgrade-modal {
+    width: min(100%, 560px) !important;
+    max-height: calc(100dvh - 28px) !important;
+    overflow-y: auto !important;
+    border-radius: 16px !important;
+    padding: 22px 16px !important;
+  }
+
+  .modal-header-clean {
+    padding: 0 30px;
+    margin-bottom: 18px;
+  }
+
+  .modal-title {
+    font-size: 22px !important;
+  }
+
+  .clean-benefits-row,
+  .pro-benefits-row.clean-benefits-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .pro-benefit {
+    min-height: 68px !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 12px !important;
+  }
+
+  .clean-cta-row .cta-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .primary-cta {
+    width: 100% !important;
+    height: 44px !important;
+  }
+
+  .secondary-cta {
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .clean-benefits-row,
+  .pro-benefits-row.clean-benefits-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+
+/* Final responsive + aligned benefit cards */
+.storage-modal.pro-upgrade-modal,
+.storage-modal {
+  max-width: 560px !important;
+  width: min(560px, calc(100vw - 32px)) !important;
+}
+
+.modal-layer {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.pro-benefits-row.clean-benefits-row {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+}
+
+.pro-benefit {
+  display: grid !important;
+  grid-template-rows: 42px minmax(32px, auto) !important;
+  align-items: start !important;
+  justify-items: center !important;
+  text-align: center !important;
+  gap: 10px !important;
+  min-height: 106px !important;
+  height: 100% !important;
+  padding: 14px 8px 12px !important;
+}
+
+.pro-benefit-icon {
+  display: grid !important;
+  place-items: center !important;
+  width: 42px !important;
+  height: 42px !important;
+  align-self: start !important;
+  justify-self: center !important;
+}
+
+.pro-benefit-icon svg {
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.pro-benefit > span:last-child {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  min-height: 32px !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  .modal-layer {
+    position: fixed !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 16px !important;
+    min-height: 100dvh !important;
+  }
+
+  .storage-modal.pro-upgrade-modal,
+  .storage-modal {
+    width: min(560px, calc(100vw - 32px)) !important;
+    max-height: calc(100dvh - 32px) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    border-radius: 18px !important;
+    padding: 22px 16px !important;
+    margin: auto !important;
+  }
+
+  .modal-header-clean {
+    padding: 0 28px !important;
+  }
+
+  .pro-benefits-row.clean-benefits-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  .pro-benefit {
+    grid-template-rows: 38px minmax(20px, auto) !important;
+    min-height: 92px !important;
+    padding: 12px 10px !important;
+    text-align: center !important;
+  }
+
+  .pro-benefit-icon {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 11px !important;
+  }
+
+  .pro-benefit-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .clean-cta-row .cta-actions {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .primary-cta {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-layer {
+    align-items: flex-start !important;
+    padding: 10px !important;
+  }
+
+  .storage-modal.pro-upgrade-modal,
+  .storage-modal {
+    width: calc(100vw - 20px) !important;
+    max-height: calc(100dvh - 20px) !important;
+    border-radius: 16px !important;
+    padding: 18px 12px !important;
+  }
+
+  .modal-header-clean {
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+    padding: 0 30px !important;
+  }
+
+  .modal-title {
+    font-size: 21px !important;
+  }
+
+  .clean-plan-card,
+  .pro-plan-card.clean-plan-card {
+    padding: 14px !important;
+  }
+
+  .pro-benefits-row.clean-benefits-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .pro-benefit {
+    min-height: 88px !important;
+    padding: 11px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  .pro-benefit > span:last-child {
+    min-height: 28px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .pro-benefits-row.clean-benefits-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pro-benefit {
+    grid-template-columns: 38px 1fr !important;
+    grid-template-rows: auto !important;
+    justify-items: start !important;
+    align-items: center !important;
+    min-height: 64px !important;
+    text-align: left !important;
+  }
+
+  .pro-benefit > span:last-child {
+    justify-content: flex-start !important;
+    align-items: center !important;
+    min-height: auto !important;
+    text-align: left !important;
+  }
+}
+
+
+
+/* 10/10 polish pass: compact hierarchy, premium benefit chips, mobile bottom sheet + sticky CTA */
+:root{
+  --bridge-blue:#2F43DE;
+  --bridge-blue-hover:#2638BF;
+  --bridge-blue-soft:#F7F8FF;
+  --bridge-blue-line:#E6EAFF;
+  --bridge-blue-icon:#EEF2FF;
+  --bridge-warning-bg:#FFF7E3;
+  --bridge-warning-line:#FFD978;
+  --bridge-warning-text:#A16A00;
+}
+
+.modal-layer{
+  background:rgba(245,245,247,.54) !important;
+  backdrop-filter:blur(2px);
+}
+
+.storage-modal.pro-upgrade-modal{
+  width:min(640px,100%) !important;
+  background:#fff !important;
+  border:1px solid #E2E2E7 !important;
+  box-shadow:0 1px 2px rgba(20,20,25,.05),0 18px 46px rgba(20,20,25,.12) !important;
+  border-radius:24px !important;
+  padding:28px !important;
+}
+
+.storage-modal.pro-upgrade-modal::before{display:none !important;}
+
+.modal-header-clean{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  text-align:center !important;
+  gap:12px !important;
+  margin:0 0 18px !important;
+  padding-right:0 !important;
+}
+
+.paused-pill{
+  background:var(--bridge-warning-bg) !important;
+  border:1px solid var(--bridge-warning-line) !important;
+  color:var(--bridge-warning-text) !important;
+  height:30px !important;
+  border-radius:999px !important;
+  padding:0 12px !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+}
+
+.modal-title{
+  font-size:26px !important;
+  line-height:1.08 !important;
+  letter-spacing:-.035em !important;
+  text-align:center !important;
+}
+
+.clean-plan-card{
+  background:#fff !important;
+  border:1px solid #ECECF1 !important;
+  box-shadow:none !important;
+  border-radius:16px !important;
+  padding:16px !important;
+  margin-bottom:16px !important;
+}
+
+.clean-plan-limit{
+  display:block !important;
+  text-align:center !important;
+  margin-bottom:14px !important;
+}
+
+.clean-plan-limit strong{
+  display:block !important;
+  font-size:15px !important;
+  line-height:1.25 !important;
+  margin-bottom:5px !important;
+  color:#171719 !important;
+}
+
+.clean-plan-limit span{
+  display:block !important;
+  max-width:420px !important;
+  margin:0 auto !important;
+  font-size:13.5px !important;
+  line-height:1.42 !important;
+  color:#74747e !important;
+}
+
+.simple-usage-bar{
+  height:8px !important;
+  background:#ECECF6 !important;
+}
+.simple-usage-bar span{background:var(--bridge-blue) !important;}
+.simple-usage-meta{font-size:11.5px !important;}
+
+.pro-benefits-row.clean-benefits-row{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:8px !important;
+  margin:0 0 20px !important;
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit{
+  min-height:86px !important;
+  padding:12px 8px !important;
+  border-radius:14px !important;
+  background:var(--bridge-blue-soft) !important;
+  border:1px solid var(--bridge-blue-line) !important;
+  color:#171719 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:8px !important;
+  text-align:center !important;
+  transition:background .15s ease,border-color .15s ease,transform .15s ease !important;
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit:hover{
+  background:#F2F5FF !important;
+  border-color:#D9E0FF !important;
+  transform:translateY(-1px);
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit-icon{
+  width:34px !important;
+  height:34px !important;
+  border-radius:12px !important;
+  background:var(--bridge-blue-icon) !important;
+  color:var(--bridge-blue) !important;
+  display:grid !important;
+  place-items:center !important;
+  flex:0 0 34px !important;
+  margin:0 !important;
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit-icon svg{
+  width:19px !important;
+  height:19px !important;
+  display:block !important;
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit > span:last-child{
+  min-height:30px !important;
+  display:flex !important;
+  align-items:flex-start !important;
+  justify-content:center !important;
+  font-size:11.5px !important;
+  line-height:1.22 !important;
+  font-weight:800 !important;
+  text-wrap:balance;
+}
+
+.clean-cta-row,
+.cta-row.clean-cta-row{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  margin:0 !important;
+}
+
+.clean-cta-row .cta-actions{
+  width:min(360px,100%) !important;
+  margin:0 auto !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  gap:12px !important;
+}
+
+.primary-cta{
+  width:100% !important;
+  height:46px !important;
+  border-radius:10px !important;
+  background:var(--bridge-blue) !important;
+  border:1px solid var(--bridge-blue) !important;
+  color:#fff !important;
+  box-shadow:none !important;
+  font-size:14px !important;
+  font-weight:800 !important;
+}
+.primary-cta:hover{background:var(--bridge-blue-hover) !important;border-color:var(--bridge-blue-hover) !important;}
+.primary-cta svg{width:17px !important;height:17px !important;}
+
+.compare-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  color:#74747e !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+  line-height:1 !important;
+}
+.compare-link:hover{color:#171719 !important;text-decoration:underline !important;text-underline-offset:3px;}
+
+@media(max-width:900px){
+  .modal-layer{
+    position:fixed !important;
+    inset:0 !important;
+    display:flex !important;
+    align-items:flex-end !important;
+    justify-content:center !important;
+    padding:0 !important;
+    background:rgba(23,23,25,.20) !important;
+  }
+  .storage-modal.pro-upgrade-modal{
+    width:100% !important;
+    max-width:none !important;
+    max-height:min(88dvh,720px) !important;
+    overflow-y:auto !important;
+    border-radius:22px 22px 0 0 !important;
+    padding:22px 18px calc(102px + env(safe-area-inset-bottom)) !important;
+    border-left:0 !important;
+    border-right:0 !important;
+    border-bottom:0 !important;
+  }
+  .modal-close{
+    top:14px !important;
+    right:14px !important;
+  }
+  .modal-header-clean{gap:10px !important;margin-bottom:16px !important;}
+  .modal-title{font-size:23px !important;max-width:290px !important;}
+  .clean-plan-card{padding:14px !important;margin-bottom:14px !important;}
+  .clean-plan-limit strong{font-size:14.5px !important;}
+  .clean-plan-limit span{font-size:13px !important;max-width:310px !important;}
+  .pro-benefits-row.clean-benefits-row{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+    margin-bottom:18px !important;
+  }
+  .pro-benefits-row.clean-benefits-row .pro-benefit{
+    min-height:50px !important;
+    padding:9px 12px !important;
+    flex-direction:row !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+    gap:11px !important;
+  }
+  .pro-benefits-row.clean-benefits-row .pro-benefit:hover{transform:none !important;}
+  .pro-benefits-row.clean-benefits-row .pro-benefit-icon{
+    width:32px !important;
+    height:32px !important;
+    flex:0 0 32px !important;
+    border-radius:10px !important;
+  }
+  .pro-benefits-row.clean-benefits-row .pro-benefit-icon svg{
+    width:18px !important;
+    height:18px !important;
+  }
+  .pro-benefits-row.clean-benefits-row .pro-benefit > span:last-child{
+    min-height:0 !important;
+    display:block !important;
+    font-size:13px !important;
+    line-height:1.2 !important;
+    text-align:left !important;
+  }
+  .clean-cta-row,
+  .cta-row.clean-cta-row{
+    position:sticky !important;
+    bottom:0 !important;
+    margin:16px -18px calc(-102px - env(safe-area-inset-bottom)) !important;
+    padding:14px 18px calc(14px + env(safe-area-inset-bottom)) !important;
+    background:linear-gradient(180deg,rgba(255,255,255,.94),#fff 28%) !important;
+    border-top:1px solid #ECECF1 !important;
+    z-index:4 !important;
+  }
+  .clean-cta-row .cta-actions{width:100% !important;gap:11px !important;}
+  .primary-cta{height:46px !important;border-radius:10px !important;}
+}
+
+@media(max-width:380px){
+  .storage-modal.pro-upgrade-modal{padding-left:14px !important;padding-right:14px !important;}
+  .clean-cta-row,
+  .cta-row.clean-cta-row{margin-left:-14px !important;margin-right:-14px !important;padding-left:14px !important;padding-right:14px !important;}
+  .modal-title{font-size:21px !important;}
+}
+
+
+
+/* Final requested tweaks: two-line message, aligned benefit cards, fully visible mobile modal */
+.limit-message{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:2px !important;
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit{
+  display:grid !important;
+  grid-template-rows:34px 32px !important;
+  align-items:start !important;
+  justify-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit-icon{
+  align-self:start !important;
+  justify-self:center !important;
+}
+
+.pro-benefits-row.clean-benefits-row .pro-benefit > span:last-child{
+  min-height:32px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+
+@media(max-width:900px){
+  .modal-layer{
+    align-items:center !important;
+    padding:8px !important;
+  }
+
+  .storage-modal.pro-upgrade-modal{
+    width:min(420px,100%) !important;
+    max-height:calc(100dvh - 16px) !important;
+    overflow-y:auto !important;
+    border-radius:20px !important;
+    padding:16px !important;
+    border:1px solid #E2E2E7 !important;
+  }
+
+  .modal-header-clean{
+    gap:8px !important;
+    margin-bottom:12px !important;
+  }
+
+  .paused-pill{
+    height:26px !important;
+    padding:0 10px !important;
+    font-size:11px !important;
+  }
+
+  .modal-title{
+    font-size:20px !important;
+    max-width:280px !important;
+  }
+
+  .modal-close{
+    width:30px !important;
+    height:30px !important;
+    top:10px !important;
+    right:10px !important;
+  }
+
+  .clean-plan-card{
+    padding:12px !important;
+    margin-bottom:12px !important;
+    border-radius:14px !important;
+  }
+
+  .clean-plan-limit{
+    margin-bottom:10px !important;
+  }
+
+  .clean-plan-limit strong{
+    font-size:13.5px !important;
+    margin-bottom:4px !important;
+  }
+
+  .clean-plan-limit span{
+    font-size:12.5px !important;
+    line-height:1.32 !important;
+    max-width:300px !important;
+  }
+
+  .simple-usage-bar{height:7px !important;}
+  .simple-usage-meta{margin-top:7px !important;font-size:11px !important;}
+
+  .pro-benefits-row.clean-benefits-row{
+    grid-template-columns:1fr !important;
+    gap:6px !important;
+    margin-bottom:12px !important;
+  }
+
+  .pro-benefits-row.clean-benefits-row .pro-benefit{
+    min-height:38px !important;
+    height:38px !important;
+    padding:6px 10px !important;
+    border-radius:12px !important;
+    display:grid !important;
+    grid-template-columns:28px 1fr !important;
+    grid-template-rows:1fr !important;
+    align-items:center !important;
+    justify-items:start !important;
+    gap:10px !important;
+    text-align:left !important;
+  }
+
+  .pro-benefits-row.clean-benefits-row .pro-benefit-icon{
+    width:28px !important;
+    height:28px !important;
+    flex:0 0 28px !important;
+    border-radius:9px !important;
+    align-self:center !important;
+    justify-self:center !important;
+  }
+
+  .pro-benefits-row.clean-benefits-row .pro-benefit-icon svg{
+    width:16px !important;
+    height:16px !important;
+  }
+
+  .pro-benefits-row.clean-benefits-row .pro-benefit > span:last-child{
+    min-height:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+    font-size:12.5px !important;
+    line-height:1.1 !important;
+  }
+
+  .clean-cta-row,
+  .cta-row.clean-cta-row{
+    position:static !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border-top:0 !important;
+  }
+
+  .clean-cta-row .cta-actions{
+    width:100% !important;
+    gap:9px !important;
+  }
+
+  .primary-cta{
+    height:42px !important;
+    border-radius:9px !important;
+    font-size:13.5px !important;
+  }
+
+  .compare-link{font-size:12.5px !important;}
+}
+
+@media(max-height:680px) and (max-width:900px){
+  .storage-modal.pro-upgrade-modal{padding:12px !important;border-radius:16px !important;}
+  .modal-header-clean{gap:6px !important;margin-bottom:9px !important;}
+  .paused-pill{height:24px !important;font-size:10.5px !important;}
+  .modal-title{font-size:18px !important;}
+  .clean-plan-card{padding:10px !important;margin-bottom:9px !important;}
+  .clean-plan-limit strong{font-size:13px !important;}
+  .clean-plan-limit span{font-size:12px !important;}
+  .pro-benefits-row.clean-benefits-row{gap:5px !important;margin-bottom:9px !important;}
+  .pro-benefits-row.clean-benefits-row .pro-benefit{height:34px !important;min-height:34px !important;padding:5px 8px !important;}
+  .pro-benefits-row.clean-benefits-row .pro-benefit-icon{width:25px !important;height:25px !important;border-radius:8px !important;}
+  .pro-benefits-row.clean-benefits-row .pro-benefit-icon svg{width:14px !important;height:14px !important;}
+  .primary-cta{height:38px !important;}
+}
+
+</style>
 </head>
 <body>
   <div class="app">
@@ -1188,49 +2113,38 @@
         <div class="modal-layer">
           <section class="storage-modal pro-upgrade-modal" role="dialog" aria-labelledby="storage-title" aria-describedby="storage-description">
             <div class="modal-content">
-              <div class="modal-top">
-                <div class="modal-emblem">
-                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clip-path="url(#clip-pro-diamond-white-storage)"><path d="M5.26953 1.36719L6.35156 3.74805L8.18555 4.58203H15.7246L15.8096 4.58691C16.005 4.61152 16.1821 4.72048 16.293 4.88672L19.0273 8.98828C19.197 9.24307 19.1768 9.58007 18.9775 9.8125L10.7744 19.3828C10.6425 19.5365 10.4486 19.6238 10.2461 19.6211C10.0434 19.6181 9.85124 19.5256 9.72363 19.3682L1.97656 9.79785C1.80124 9.58124 1.77502 9.27883 1.91016 9.03516L3.0498 6.98438L3.19824 6.71484L0.945312 5.69141L0 5.26172L0.945312 4.83203L3.32715 3.74902L4.41016 1.36719L4.83984 0.421875L5.26953 1.36719ZM8.93555 9.35742L7.48242 10.0176L8.93555 10.6787L9.59668 12.1318L10.2568 10.6787L11.7109 10.0176L10.2568 9.35742L9.59668 7.9043L8.93555 9.35742ZM4.11426 4.30176L4.04102 4.46289L3.87988 4.53613L2.28125 5.26172L3.87988 5.98828L4.04102 6.06152L4.11426 6.22266L4.83984 7.82031L5.56641 6.22266L5.63965 6.06152L5.80078 5.98828L7.39844 5.26172L5.80078 4.53613L5.63965 4.46289L5.56641 4.30176L4.83984 2.70312L4.11426 4.30176Z" fill="white"/></g><defs><clipPath id="clip-pro-diamond-white-storage"><rect width="19.142" height="19.1993" fill="white" transform="translate(0 0.421875)"/></clipPath></defs></svg>
-                </div>
+              <button class="modal-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
 
-                <div>
-                  <div class="modal-title-row">
-                    <h2 class="modal-title" id="storage-title">Unlock more with Bridge Pro</h2>
-                  </div>
-                  <p class="modal-copy" id="storage-description">
-                    Your upload is blocked because your Free plan limits are active. Upgrade to boost your workspace size, unlock advanced sharing and insights, and get your music heard and licensed by supervisors, brands, ad agencies and much more — zero commission.
-                  </p>
-                </div>
-
-                <button class="modal-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+              <div class="modal-header-clean">
+                <span class="paused-pill">Upload paused</span>
+                <h2 class="modal-title" id="storage-title">Upgrade to Bridge Pro</h2>
               </div>
 
-              <div class="pro-plan-card">
-                <div class="plan-limit">
+              <div class="pro-plan-card clean-plan-card" aria-describedby="storage-description">
+                <div class="plan-limit clean-plan-limit">
                   <div>
-                    <span class="eyebrow">Free plan limits active</span>
-                    <strong>Upload blocked — workspace limit reached</strong>
+                    <strong id="storage-description">Workspace limit reached</strong>
+                    <span class="limit-message"><span>Upgrade to continue uploading.</span></span>
                   </div>
-                  <span class="paused-pill">Upload blocked</span>
                 </div>
 
                 <div class="simple-usage">
-                  <div class="simple-usage-bar" aria-label="Free plan usage">
+                  <div class="simple-usage-bar" aria-label="Current Pro plan usage">
                     <span style="width: 100%;"></span>
                   </div>
                   <div class="simple-usage-meta">
-                    <span>Free workspace is full</span>
-                    <span>Upgrade to resume instantly</span>
+                    <span>Plan usage</span>
+                    <span>100%</span>
                   </div>
                 </div>
               </div>
 
-              <div class="pro-benefits-row" aria-label="Bridge Pro benefits">
+              <div class="pro-benefits-row clean-benefits-row" aria-label="Bridge Pro plan benefits">
                 <div class="pro-benefit">
                   <span class="pro-benefit-icon"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 9.75C4.5 6.43629 7.18629 3.75 10.5 3.75C13.028 3.75 15.1893 5.31282 16.0733 7.52408C16.2135 7.50816 16.3559 7.5 16.5 7.5C18.5711 7.5 20.25 9.17893 20.25 11.25C20.25 11.4459 20.2349 11.6386 20.2058 11.827C21.5744 12.5981 22.5 14.0653 22.5 15.75C22.5 18.2353 20.4853 20.25 18 20.25H6.75C3.85051 20.25 1.5 17.8995 1.5 15C1.5 12.8968 2.73627 11.084 4.52024 10.2459C4.50683 10.0822 4.5 9.91686 4.5 9.75Z" fill="currentColor"/>
 </svg></span>
-                  <span>Boost your workspace</span>
+                  <span>More storage</span>
                 </div>
                 <div class="pro-benefit">
                   <span class="pro-benefit-icon"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1257,22 +2171,22 @@
                   <span>Advanced insights</span>
                 </div>
                 <div class="pro-benefit">
-                  <span class="pro-benefit-icon"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M9.315 7.58365C12.1956 3.88296 16.6946 1.50021 21.75 1.5C21.9489 1.49999 22.1397 1.57901 22.2803 1.71966C22.421 1.86031 22.5 2.05108 22.5 2.25C22.5 7.30564 20.1173 11.805 16.4165 14.6859C16.4715 15.0329 16.5 15.3883 16.5 15.75C16.5 19.4779 13.4779 22.5 9.75 22.5C9.33579 22.5 9 22.1642 9 21.75V17.6185C8.99075 17.6118 8.98163 17.6049 8.97264 17.5978C8.02063 16.8429 7.15799 15.9803 6.40312 15.0282C6.39577 15.019 6.38866 15.0096 6.38179 15H2.25C1.83579 15 1.5 14.6642 1.5 14.25C1.5 10.5221 4.52208 7.5 8.25 7.5C8.61198 7.5 8.96772 7.52856 9.315 7.58365ZM15 6.75C13.7574 6.75 12.75 7.75736 12.75 9C12.75 10.2426 13.7574 11.25 15 11.25C16.2426 11.25 17.25 10.2426 17.25 9C17.25 7.75736 16.2426 6.75 15 6.75Z" fill="currentColor"/>
-<path d="M5.26036 17.2418C5.59237 16.9942 5.66074 16.5242 5.41306 16.1922C5.16539 15.8602 4.69546 15.7918 4.36345 16.0395C3.08209 16.9954 2.25 18.5256 2.25 20.2499C2.25 20.5255 2.27129 20.7966 2.31246 21.0615C2.36259 21.3842 2.61574 21.6373 2.93842 21.6875C3.20336 21.7286 3.47445 21.7499 3.75 21.7499C5.47434 21.7499 7.00452 20.9178 7.9604 19.6365C8.20808 19.3045 8.13971 18.8345 7.8077 18.5869C7.47569 18.3392 7.00576 18.4075 6.75809 18.7396C6.07313 19.6577 4.98081 20.2499 3.75 20.2499C3.75 19.0191 4.34218 17.9268 5.26036 17.2418Z" fill="currentColor"/>
+                  <span class="pro-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.32341 11.4467C2.81066 6.97571 7.02791 3.75 12.0005 3.75C16.9708 3.75 21.1864 6.97271 22.6755 11.4405C22.7959 11.8015 22.796 12.1922 22.6759 12.5533C21.1886 17.0243 16.9714 20.25 11.9988 20.25C7.02847 20.25 2.81284 17.0273 1.32374 12.5595C1.2034 12.1985 1.20328 11.8078 1.32341 11.4467ZM17.25 12C17.25 14.8995 14.8995 17.25 12 17.25C9.1005 17.25 6.75 14.8995 6.75 12C6.75 9.1005 9.1005 6.75 12 6.75C14.8995 6.75 17.25 9.1005 17.25 12Z" fill="currentColor"/>
 </svg></span>
-                  <span>Discovery Hub exposure</span>
+                  <span>Publish on Discovery Hubs</span>
                 </div>
               </div>
 
-              <div class="cta-row">
-                <div class="fine-print">Your queued files stay ready. Upgrade to Bridge Pro to continue uploading without deleting anything.</div>
+
+              <div class="cta-row clean-cta-row">
                 <div class="cta-actions">
                   <a class="primary-cta" href="https://clementsouchier-stack.github.io/pricing24/" target="_blank" rel="noopener noreferrer">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clip-path="url(#clip-pro-diamond-white-storage)"><path d="M5.26953 1.36719L6.35156 3.74805L8.18555 4.58203H15.7246L15.8096 4.58691C16.005 4.61152 16.1821 4.72048 16.293 4.88672L19.0273 8.98828C19.197 9.24307 19.1768 9.58007 18.9775 9.8125L10.7744 19.3828C10.6425 19.5365 10.4486 19.6238 10.2461 19.6211C10.0434 19.6181 9.85124 19.5256 9.72363 19.3682L1.97656 9.79785C1.80124 9.58124 1.77502 9.27883 1.91016 9.03516L3.0498 6.98438L3.19824 6.71484L0.945312 5.69141L0 5.26172L0.945312 4.83203L3.32715 3.74902L4.41016 1.36719L4.83984 0.421875L5.26953 1.36719ZM8.93555 9.35742L7.48242 10.0176L8.93555 10.6787L9.59668 12.1318L10.2568 10.6787L11.7109 10.0176L10.2568 9.35742L9.59668 7.9043L8.93555 9.35742ZM4.11426 4.30176L4.04102 4.46289L3.87988 4.53613L2.28125 5.26172L3.87988 5.98828L4.04102 6.06152L4.11426 6.22266L4.83984 7.82031L5.56641 6.22266L5.63965 6.06152L5.80078 5.98828L7.39844 5.26172L5.80078 4.53613L5.63965 4.46289L5.56641 4.30176L4.83984 2.70312L4.11426 4.30176Z" fill="white"/></g><defs><clipPath id="clip-pro-diamond-white-storage"><rect width="19.142" height="19.1993" fill="white" transform="translate(0 0.421875)"/></clipPath></defs></svg>
-                    Upgrade to Pro
+                    Turn Pro
                   </a>
-                  <a class="secondary-cta" href="https://clementsouchier-stack.github.io/pricing24/" target="_blank" rel="noopener noreferrer">View Pro plans</a>
+                  <a class="compare-link" href="https://clementsouchier-stack.github.io/pricing24/" target="_blank" rel="noopener noreferrer">View plans</a>
                 </div>
               </div>
             </div>
